@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM2</title>
+    <style>
+        div#area {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background-color: green;
+            font-size: larger;
+            color: white;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="area">
+        Interaja!!!!!!!!
+    </div>
+
+    <script>
+
+        var area = document.querySelector('div#area')
+        area.addEventListener('click', clicar)
+        area.addEventListener('mouseenter', entrar)
+        area.addEventListener('mouseout', sair)
+
+        function clicar() {
+            area.innerText = 'Clicou!'
+            area.style.backgroundColor = 'red'
+        }
+
+        function entrar() {
+            area.innerText = 'entrou'
+        }
+
+        function sair() {
+            area.innerText = 'Saiu'
+            area.style.backgroundColor = 'green'
+        }
+    
+        /* function ação(param) {
+            bloco
+        }
+        *Aqui temos um bloco, ele só vai ocorrer com alguma condição.
+        *Podemos nomear o bloco com function(função), no caso iria monstra a função do bloco.
+        *Devemos dar um nome a função, esse seria a ação dela, o que ela faz.
+        *Dentro dos parênteses podemos dar parametros para a ação.
+        */
+    </script>
+
+</body>
+
+</html>

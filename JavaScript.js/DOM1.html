@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        body {
+            background-color: aquamarine;
+            color: white;
+            font: normal 18px arial;
+        }
+        .imagem {
+            margin-left: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>aqui vai o resultado</p>
+    <p>Aprendendo DOM em JavaScript</p>
+    <div id="texto">clique em mim</div>
+
+    <div class="imagem">
+        <img src="imgs/arvore-dom.jpg" alt=""> 
+    </div>
+
+    <script>
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[1] //0 para pegar o primeiro parágrafo.
+            window.document.write('Assim está escrito: ' + p1.innerHTML) //p1.innertext para pegar o que está dentro do primeiro parágrafo.
+        /*var d = window.document.getElementById('texto')
+        d.style.background = 'green' //aqui eu posso acessar diretamente o id pelo js*/
+        var d = document.querySelector('div#texto') //Qselector para elementos css
+
+    </script> 
+
+
+</body>
+
+</html>
+<!--podemos selecionar os elementos da árvore dom por
+    *MARCA - getElementsByTagName()*
+    *ID - getElementsById()*
+    *NOME - getElementsByName()*
+    *CLASS - getElementsByClassName()*
+    *SELETOR - querySelector()*
+-->
