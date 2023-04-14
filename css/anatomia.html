@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Anatomia CSS</title>
+    <style>
+        .selector {
+            color: #f2ebeb;
+            font-size: 30px;
+            text-align: center;
+            /*multiplos valores*/
+            border: solid 5px navy; /*propriedades de acesso rápido, apartir de uma propriedade podemos aplicar multiplos valores*/
+            font-family: Helvetica, sans-serif; /*caso não suporte a 1 fonte ira na segunda para isso utiliza a ','*/
+            /*funções*/
+            width: calc(100% - 300px); /*calc para calcular as dimensões, depois de calc pode-se usar os parametros para calc ocorrer*/
+            background-color: rgb(34, 153, 189);
+        }
+
+        /*usando uma pseudo-classe*/
+        .selector:hover{  /*essa pseudo-classe hover sera aplicado quando o mouse do usuário passar por cima*/
+            background-color: red;
+        }
+        /*usando um pseudo-elemento*/
+        .selector::first-letter {
+            font-size: 60px;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="selector">Conteúdo</div> <!--é importante que criemos classes específicas-->
+</body>
+
+</html>
